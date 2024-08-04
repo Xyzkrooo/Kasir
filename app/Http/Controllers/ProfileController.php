@@ -26,20 +26,15 @@ class ProfileController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255',
-            'phone' => 'nullable|string|max:15',
-            'birthday' => 'nullable|date',
-            'gender' => 'nullable|string|in:male,female',
+            
         ]);
 
         $user = Auth::user();
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
-        $user->phone = $request->input('phone');
-        $user->birthday = $request->input('birthday');
-        $user->gender = $request->input('gender');
+        $user->name = $request->name;
+        $user->email = $request->email;
 
         $user->save();
 
-        return redirect()->route('profile')->with('status', 'Profile updated successfully!');
+        return redirect()->route('profile.edit')->with('status', 'Profile updated successfully!');
     }
 }
