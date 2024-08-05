@@ -15,9 +15,23 @@
                 <li class="sidebar-title">Menu</li>
 
                 <li class="sidebar-item  ">
-                    <a href="index.html" class='sidebar-link'>
+                    <a href="{{url('/')}}" class='sidebar-link'>
                         <i class="bi bi-grid-fill"></i>
                         <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item  ">
+                    <a href="{{url('/kategori')}}" class='sidebar-link'>
+                        <i class="bi bi-tag-fill"></i>
+                        <span>Kategori</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item  ">
+                    <a href="{{url('/kategori')}}" class='sidebar-link'>
+                        <i class="bi bi-cup-hot-fill"></i>
+                        <span>Kategori</span>
                     </a>
                 </li>
 
